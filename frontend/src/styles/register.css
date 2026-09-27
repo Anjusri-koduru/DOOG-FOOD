@@ -1,0 +1,527 @@
+/* =========================================================
+   DOGFOOD - REGISTER PAGE
+   ========================================================= */
+
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(99, 102, 241, 0.08),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f7ff 0%,
+      #f8fafc 50%,
+      #eef2ff 100%
+    );
+}
+
+
+/* =========================================================
+   REGISTER CARD
+   ========================================================= */
+
+.register-card {
+  width: 100%;
+  max-width: 620px;
+
+  padding: 42px 46px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 60px rgba(15, 23, 42, 0.10),
+    0 8px 20px rgba(15, 23, 42, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.register-card:hover {
+  box-shadow:
+    0 30px 70px rgba(15, 23, 42, 0.13),
+    0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.register-card .auth-logo {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 46px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef2ff,
+      #e0e7ff
+    );
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.10);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.register-card h1 {
+  margin: 0;
+
+  text-align: center;
+
+  color: #111827;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.register-card .auth-subtitle {
+  margin: 10px 0 30px;
+
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.form-error {
+  width: 100%;
+
+  margin-bottom: 22px;
+  padding: 13px 15px;
+
+  color: #b91c1c;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  animation: registerErrorIn 0.2s ease;
+}
+
+@keyframes registerErrorIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.register-card form {
+  width: 100%;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.register-card .form-group {
+  width: 100%;
+
+  margin-bottom: 19px;
+}
+
+.register-card .form-group label {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 8px;
+
+  color: #1f2937;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   OPTIONAL TEXT
+   ========================================================= */
+
+.register-card .optional {
+  margin-left: 7px;
+
+  color: #9ca3af;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.register-card .form-group input,
+.register-card .form-group select,
+.register-card .form-group textarea {
+  width: 100%;
+
+  border: 1px solid #dbe1ea;
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* INPUT */
+
+.register-card .form-group input,
+.register-card .form-group select {
+  min-height: 49px;
+
+  padding: 12px 14px;
+}
+
+
+/* TEXTAREA */
+
+.register-card .form-group textarea {
+  min-height: 90px;
+
+  padding: 12px 14px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+
+/* PLACEHOLDER */
+
+.register-card .form-group input::placeholder,
+.register-card .form-group textarea::placeholder {
+  color: #a1a8b3;
+}
+
+
+/* FOCUS */
+
+.register-card .form-group input:focus,
+.register-card .form-group select:focus,
+.register-card .form-group textarea:focus {
+  border-color: #6366f1;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.10);
+}
+
+
+/* HOVER */
+
+.register-card .form-group input:hover,
+.register-card .form-group select:hover,
+.register-card .form-group textarea:hover {
+  border-color: #b8c1cf;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.register-card .form-group select {
+  cursor: pointer;
+
+  appearance: auto;
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.register-card .form-group input:disabled,
+.register-card .form-group select:disabled,
+.register-card .form-group textarea:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.65;
+
+  background: #f8fafc;
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT BUTTON
+   ========================================================= */
+
+.auth-submit-button {
+  width: 100%;
+
+  min-height: 52px;
+
+  margin-top: 6px;
+
+  border: none;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #4f46e5
+    );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.auth-submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 26px rgba(79, 70, 229, 0.28);
+}
+
+
+/* BUTTON ACTIVE */
+
+.auth-submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+
+/* BUTTON DISABLED */
+
+.auth-submit-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.register-card .auth-footer {
+  margin-top: 25px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #edf0f4;
+
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+.register-card .auth-footer a {
+  color: #4f46e5;
+
+  font-weight: 700;
+
+  transition:
+    color 0.2s ease;
+}
+
+.register-card .auth-footer a:hover {
+  color: #3730a3;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .auth-page {
+    padding: 25px 16px;
+  }
+
+  .register-card {
+    max-width: 560px;
+
+    padding: 34px 30px;
+
+    border-radius: 20px;
+  }
+
+  .register-card h1 {
+    font-size: 27px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .auth-page {
+    min-height: 100dvh;
+
+    padding: 18px 12px;
+
+    align-items: flex-start;
+  }
+
+  .register-card {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 28px 20px;
+
+    border-radius: 18px;
+
+    box-shadow:
+      0 15px 40px rgba(15, 23, 42, 0.08);
+  }
+
+  .register-card .auth-logo {
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 12px;
+
+    font-size: 38px;
+
+    border-radius: 16px;
+  }
+
+  .register-card h1 {
+    font-size: 25px;
+  }
+
+  .register-card .auth-subtitle {
+    margin-bottom: 24px;
+
+    font-size: 14px;
+  }
+
+  .register-card .form-group {
+    margin-bottom: 16px;
+  }
+
+  .register-card .form-group input,
+  .register-card .form-group select {
+    min-height: 47px;
+
+    font-size: 14px;
+  }
+
+  .register-card .form-group textarea {
+    min-height: 80px;
+  }
+
+  .auth-submit-button {
+    min-height: 50px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .register-card {
+    padding: 24px 16px;
+  }
+
+  .register-card h1 {
+    font-size: 23px;
+  }
+
+  .register-card .auth-subtitle {
+    font-size: 13px;
+  }
+
+  .register-card .form-group label {
+    font-size: 13px;
+  }
+
+  .register-card .form-group input,
+  .register-card .form-group select,
+  .register-card .form-group textarea {
+    font-size: 13px;
+  }
+}
